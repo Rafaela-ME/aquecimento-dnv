@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquecimento Solar da Piscina Escolar | Projeto Integrador</title>
+  <meta name="description" content="Projeto Integrador: aquecimento solar da piscina escolar com coletores solares, placas fotovoltaicas, manta térmica e caldeira de apoio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- Barra de progresso da leitura -->
+  <div class="progresso-leitura" id="progressoLeitura"></div>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="topo">
+    <a href="#capa" class="topo-marca">
+      <span class="sol-mini" aria-hidden="true"></span>
+      Piscina Solar
+    </a>
+    <nav class="topo-links" aria-label="Menu principal">
+      <a href="#roteiro">Roteiro</a>
+      <a href="#s1">Radiação</a>
+      <a href="#s6">Sistema</a>
+      <a href="#s10">Caldeira</a>
+      <a href="#s11">Tinkercad</a>
+      <a href="#s12">Curitiba</a>
+      <a href="#fontes">Fontes</a>
+    </nav>
+    <button class="botao-apresentar" id="botaoApresentar" type="button">
+      ▶ Modo apresentação
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ================= CAPA ================= -->
+    <section class="slide capa" id="capa" data-apresentador="Rafaela">
+      <div class="capa-texto">
+        <p class="sobretitulo">Projeto Integrador</p>
+        <h1>Aquecimento Solar<br>da Piscina Escolar</h1>
+        <p class="capa-sub">Como usar a energia do Sol, com apoio elétrico, para manter a piscina da escola aquecida gastando menos e poluindo menos.</p>
+        <ul class="capa-equipe">
+          <li style="--cor: var(--rafaela)">Rafaela</li>
+          <li style="--cor: var(--beatriz)">Beatriz</li>
+          <li style="--cor: var(--daniel)">Daniel</li>
+          <li style="--cor: var(--amanda)">Amanda</li>
+        </ul>
+      </div>
+      <figure class="foto foto-capa">
+        <img data-imagem="imagem1" alt="Foto da piscina real da escola">
+        <figcaption>A piscina da escola, foco do nosso projeto.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= ROTEIRO / EQUIPE ================= -->
+    <section class="slide" id="roteiro" data-apresentador="Rafaela">
+      <div class="conteudo">
+        <h2><span class="num">★</span> Equipe e roteiro da apresentação</h2>
+        <div class="roteiro-grade">
+          <div class="roteiro-cartao" style="--cor: var(--rafaela)">
+            <h3>Rafaela</h3>
+            <ol>
+              <li><a href="#s1">O que é radiação solar?</a></li>
+              <li><a href="#s2">Por que essas radiações importam?</a></li>
+              <li><a href="#s3">Proposta sustentável</a></li>
+            </ol>
+          </div>
+          <div class="roteiro-cartao" style="--cor: var(--beatriz)">
+            <h3>Beatriz</h3>
+            <ol start="4">
+              <li><a href="#s4">Panorama das formas de aquecer</a></li>
+              <li><a href="#s5">A luz solar e as placas solares</a></li>
+              <li><a href="#s6">O sistema de aquecimento</a></li>
+            </ol>
+          </div>
+          <div class="roteiro-cartao" style="--cor: var(--daniel)">
+            <h3>Daniel</h3>
+            <ol start="7">
+              <li><a href="#s7">Desafios para aquecer a piscina</a></li>
+              <li><a href="#s8">Por que usar energia solar?</a></li>
+              <li><a href="#s9">Placas solares para viabilizar o custo</a></li>
+              <li><a href="#s10">A caldeira</a></li>
+            </ol>
+          </div>
+          <div class="roteiro-cartao" style="--cor: var(--amanda)">
+            <h3>Amanda</h3>
+            <ol start="11">
+              <li><a href="#s11">Aplicação no Tinkercad</a></li>
+              <li><a href="#s12">Energia elétrica + solar em Curitiba</a></li>
+              <li><a href="#conclusao">Conclusão</a></li>
+            </ol>
+          </div>
+        </div>
+        <figure class="foto foto-media">
+          <img data-imagem="imagem9" alt="Foto do grupo: Rafaela, Beatriz, Daniel e Amanda">
+          <figcaption>Nossa equipe.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 1. RADIAÇÃO SOLAR ================= -->
+    <section class="slide" id="s1" data-apresentador="Rafaela">
+      <div class="conteudo duas-colunas">
+        <div>
+          <h2><span class="num">1</span> O que é radiação solar?</h2>
+          <p>A radiação solar é energia que o Sol emite na forma de <strong>ondas eletromagnéticas</strong>, que viajam pelo espaço e chegam à Terra. Ela se divide em três partes principais:</p>
+
+          <div class="barra-espectro" role="img" aria-label="Divisão da radiação solar: infravermelho 47%, luz visível 43%, ultravioleta 10%">
+            <span class="faixa iv" style="flex: 47">IV 47%</span>
+            <span class="faixa vis" style="flex: 43">Visível 43%</span>
+            <span class="faixa uv" style="flex: 10">UV</span>
+          </div>
+
+          <ul class="lista-cartoes">
+            <li><strong>Infravermelho (~47%)</strong>: invisível, é percebido como calor. É o principal responsável por aquecer superfícies e a água.</li>
+            <li><strong>Luz visível (~43%)</strong>: a parte que enxergamos. Ao ser absorvida por superfícies escuras, também se converte em calor.</li>
+            <li><strong>Ultravioleta (~10%)</strong>: invisível e muito energética. É a que causa bronzeamento e queimaduras, e a atmosfera filtra boa parte dela.</li>
+          </ul>
+        </div>
+        <figure class="foto">
+          <img data-imagem="imagem2" alt="O Sol / esquema das radiações solares">
+          <figcaption>O Sol: nossa fonte de energia.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 2. POR QUE IMPORTAM ================= -->
+    <section class="slide" id="s2" data-apresentador="Rafaela">
+      <div class="conteudo">
+        <h2><span class="num">2</span> Por que essas radiações importam para o projeto?</h2>
+        <p class="destaque-grande">Elas são a nossa <strong>fonte de energia gratuita</strong>.</p>
+        <div class="grade-3">
+          <div class="cartao">
+            <span class="cartao-icone" aria-hidden="true">🔥</span>
+            <h3>Viram calor</h3>
+            <p>O infravermelho e a luz visível, ao serem absorvidos, transformam-se em calor e podem aquecer a água diretamente.</p>
+          </div>
+          <div class="cartao">
+            <span class="cartao-icone" aria-hidden="true">⚡</span>
+            <h3>Viram eletricidade</h3>
+            <p>A luz também pode ser convertida em eletricidade por placas solares, que alimentam bombas, resistências ou outros equipamentos.</p>
+          </div>
+          <div class="cartao">
+            <span class="cartao-icone" aria-hidden="true">🌱</span>
+            <h3>Economia e meio ambiente</h3>
+            <p>Aproveitar esse recurso reduz a conta de energia e o impacto ambiental.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. PROPOSTA SUSTENTÁVEL ================= -->
+    <section class="slide" id="s3" data-apresentador="Rafaela">
+      <div class="conteudo duas-colunas">
+        <div>
+          <h2><span class="num">3</span> Proposta sustentável</h2>
+          <p>Usar o <strong>Sol como principal fonte de energia</strong>, combinando:</p>
+          <ul class="lista-cartoes">
+            <li><strong>Coletores solares</strong> que aquecem a água diretamente;</li>
+            <li><strong>Placas fotovoltaicas</strong> que geram eletricidade para os equipamentos;</li>
+            <li><strong>Manta térmica</strong> para manter o calor já conquistado.</li>
+          </ul>
+          <p class="resultado">O resultado é uma piscina aquecida com <strong>baixa emissão de poluentes</strong> e <strong>custo de operação reduzido</strong>.</p>
+        </div>
+        <figure class="foto">
+          <img data-imagem="imagem3" alt="Coletores solares térmicos para aquecimento de piscina">
+          <figcaption>Coletores solares: aquecem a água diretamente.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 4. PANORAMA ================= -->
+    <section class="slide" id="s4" data-apresentador="Beatriz">
+      <div class="conteudo">
+        <h2><span class="num">4</span> Panorama das formas de aquecer</h2>
+        <div class="tabela-rolagem">
+          <table>
+            <thead>
+              <tr><th>Forma</th><th>Como funciona</th><th>Ponto de atenção</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Caldeira separada</td><td>Aquece a água fora da piscina e a transfere depois</td><td>Exige estrutura extra e energia para a caldeira</td></tr>
+              <tr><td>Aquecimento elétrico</td><td>Resistência elétrica ou bomba de calor aquece a água em circulação</td><td>Consumo elétrico alto</td></tr>
+              <tr><td>A gás</td><td>Queima de gás aquece a água</td><td>Custo do combustível e emissão de CO₂</td></tr>
+              <tr><td>Coletores solares</td><td>A água circula por placas expostas ao Sol e volta aquecida</td><td>Depende do clima e do espaço disponível</td></tr>
+              <tr class="linha-escolhida"><td>Sistema híbrido ✔</td><td>Solar como base, com apoio elétrico em dias nublados</td><td>Melhor equilíbrio entre custo e confiabilidade</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. CONTEXTO ================= -->
+    <section class="slide" id="s5" data-apresentador="Beatriz">
+      <div class="conteudo">
+        <h2><span class="num">5</span> Contexto: a luz solar e as placas solares</h2>
+        <div class="numero-gigante">
+          <span class="valor">≈ 1.000 W</span>
+          <span class="rotulo">por metro quadrado chegam à superfície da Terra em um dia limpo</span>
+        </div>
+        <p>O Sol emite energia o tempo todo. Essa energia pode ser aproveitada de duas formas:</p>
+        <div class="grade-2">
+          <div class="cartao cartao-sol">
+            <h3>Como calor</h3>
+            <p>Coletores térmicos: a água passa por eles e esquenta.</p>
+          </div>
+          <div class="cartao cartao-azul">
+            <h3>Como eletricidade</h3>
+            <p>Placas fotovoltaicas: transformam luz em energia elétrica.</p>
+          </div>
+        </div>
+        <p class="resultado">Nossa proposta usa <strong>as duas</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ================= 6. SISTEMA DE AQUECIMENTO ================= -->
+    <section class="slide" id="s6" data-apresentador="Beatriz">
+      <div class="conteudo">
+        <h2><span class="num">6</span> O sistema de aquecimento</h2>
+
+        <div class="fluxo" aria-label="Caminho da água no sistema">
+          <div class="fluxo-passo">🏊<span>Piscina</span></div>
+          <div class="fluxo-seta" aria-hidden="true">→</div>
+          <div class="fluxo-passo">⚙️<span>Bomba</span></div>
+          <div class="fluxo-seta" aria-hidden="true">→</div>
+          <div class="fluxo-passo">🧽<span>Filtro</span></div>
+          <div class="fluxo-seta" aria-hidden="true">→</div>
+          <div class="fluxo-passo sol">☀️<span>Coletores solares</span></div>
+          <div class="fluxo-seta" aria-hidden="true">→</div>
+          <div class="fluxo-passo apoio">🔌<span>Apoio (dias de pouco Sol)</span></div>
+          <div class="fluxo-seta" aria-hidden="true">→</div>
+          <div class="fluxo-passo">🏊<span>Volta à piscina</span></div>
+        </div>
+
+        <div class="duas-colunas">
+          <ol class="passos">
+            <li>A bomba retira água da piscina e a envia ao filtro.</li>
+            <li>A água filtrada passa pelos coletores solares, onde absorve a radiação e esquenta.</li>
+            <li>A água aquecida retorna à piscina.</li>
+            <li>Em dias de pouco Sol, um aquecedor de apoio complementa o aquecimento.</li>
+            <li>As placas fotovoltaicas fornecem a eletricidade para a bomba e o apoio.</li>
+            <li>A manta térmica cobre a piscina quando ela não está em uso.</li>
+          </ol>
+          <figure class="foto">
+            <img data-imagem="imagem6" alt="Casa de máquinas da piscina: bomba e filtro">
+            <figcaption>Bomba e filtro: onde a água começa o caminho.</figcaption>
+          </figure>
+        </div>
+
+        <div class="caixa-fisica">
+          <h3>Física envolvida</h3>
+          <p>A água precisa de muita energia para esquentar (<strong>calor específico de 4,18 kJ/kg·°C</strong>). Aquecer <strong>1 m³</strong> de água em <strong>1 °C</strong> exige cerca de <strong>1,16 kWh</strong>, e a piscina tem centenas de metros cúbicos. Por isso o aquecimento é lento e exige planejamento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. DESAFIOS ================= -->
+    <section class="slide" id="s7" data-apresentador="Daniel">
+      <div class="conteudo duas-colunas">
+        <div>
+          <h2><span class="num">7</span> Desafios para aquecer a piscina</h2>
+          <ul class="lista-cartoes">
+            <li><strong>Perda de calor:</strong> a piscina perde energia principalmente por evaporação, e também por convecção, radiação e contato com o ambiente. A manta térmica reduz muito essa perda.</li>
+            <li><strong>Grande volume de água:</strong> aquecer tudo de uma vez exige muita energia. Uma alternativa é aquecer a água separadamente, em partes, antes de enviá-la à piscina.</li>
+            <li><strong>Tentativa anterior sem sucesso:</strong> o colégio já tentou aquecer a piscina com aquecimento a gás/elétrico. O sistema não funcionou como esperado e teve custo muito alto, o que mostra que depender só de energia comprada não é viável.</li>
+            <li><strong>Variações climáticas:</strong> em dias frios ou nublados, a eficiência cai.</li>
+          </ul>
+        </div>
+        <figure class="foto">
+          <img data-imagem="imagem5" alt="Manta térmica cobrindo uma piscina">
+          <figcaption>Manta térmica: reduz a perda de calor por evaporação.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 8. POR QUE SOLAR ================= -->
+    <section class="slide" id="s8" data-apresentador="Daniel">
+      <div class="conteudo">
+        <h2><span class="num">8</span> Por que usar energia solar?</h2>
+        <p>Diante dessas dificuldades, a energia solar se mostra a melhor escolha:</p>
+        <div class="grade-3">
+          <div class="cartao"><span class="cartao-icone" aria-hidden="true">💰</span><h3>Custo de operação baixo</h3><p>O Sol não cobra pela energia.</p></div>
+          <div class="cartao"><span class="cartao-icone" aria-hidden="true">🌿</span><h3>Sustentável</h3><p>Não emite poluentes durante o uso.</p></div>
+          <div class="cartao"><span class="cartao-icone" aria-hidden="true">🛠️</span><h3>Durável</h3><p>Os equipamentos solares têm vida útil longa e pouca manutenção.</p></div>
+          <div class="cartao"><span class="cartao-icone" aria-hidden="true">📉</span><h3>Resolve o problema do custo</h3><p>A experiência anterior mostrou que combustível e eletricidade comprados pesam demais no orçamento.</p></div>
+          <div class="cartao"><span class="cartao-icone" aria-hidden="true">🎓</span><h3>Valor educativo</h3><p>A piscina vira um exemplo prático de física aplicada.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. PLACAS SOLARES ================= -->
+    <section class="slide" id="s9" data-apresentador="Daniel">
+      <div class="conteudo duas-colunas">
+        <div>
+          <h2><span class="num">9</span> Placas solares para viabilizar o custo</h2>
+          <p>Os coletores aquecem a água, mas o sistema ainda precisa de <strong>eletricidade</strong> para bombas e equipamentos de apoio.</p>
+          <ul class="lista-cartoes">
+            <li>As placas fotovoltaicas geram essa energia a partir da luz do Sol e <strong>reduzem ou eliminam a conta de luz</strong> do sistema.</li>
+            <li>O investimento inicial <strong>se paga ao longo dos anos</strong> pela economia mensal.</li>
+            <li>A energia que sobrar pode ainda <strong>abater o consumo de outras partes da escola</strong>.</li>
+          </ul>
+        </div>
+        <figure class="foto">
+          <img data-imagem="imagem4" alt="Placas fotovoltaicas instaladas em um telhado">
+          <figcaption>Placas fotovoltaicas: luz do Sol vira eletricidade.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 10. CALDEIRA ================= -->
+    <section class="slide" id="s10" data-apresentador="Daniel">
+      <div class="conteudo">
+        <h2><span class="num">10</span> A caldeira</h2>
+        <div class="duas-colunas">
+          <div>
+            <p>A caldeira é o <strong>equipamento de apoio</strong> que aquece a água quando os coletores solares não dão conta sozinhos. Ela recebe a água já pré-aquecida pelo Sol, completa o aquecimento até a temperatura desejada e devolve a água à piscina.</p>
+            <h3>Como funciona no nosso sistema</h3>
+            <ol class="passos">
+              <li>A água sai do filtro e passa primeiro pelos coletores solares.</li>
+              <li>Um sensor mede a temperatura da água na saída dos coletores.</li>
+              <li>Se a água já está na temperatura-alvo, a caldeira fica desligada e a água segue direto para a piscina.</li>
+              <li>Se está abaixo do alvo, a caldeira liga e fornece só o calor que falta.</li>
+            </ol>
+          </div>
+          <figure class="foto">
+            <img data-imagem="imagem7" alt="Caldeira / aquecedor de apoio para piscina">
+            <figcaption>Caldeira: o apoio para os dias de pouco Sol.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Tipos que podem ser usados</h3>
+        <div class="grade-2">
+          <div class="cartao cartao-azul">
+            <h3>Elétrica</h3>
+            <p>Uma resistência aquece a água em circulação. É simples de instalar e pode ser alimentada pelas placas fotovoltaicas.</p>
+          </div>
+          <div class="cartao cartao-sol">
+            <h3>A gás</h3>
+            <p>A queima do gás aquece a água. Aquece rápido, mas tem custo de combustível e emite CO₂.</p>
+          </div>
+        </div>
+
+        <div class="caixa-fisica">
+          <h3>Por que ela é um apoio, e não a fonte principal</h3>
+          <p>A experiência anterior do colégio mostrou que aquecer a piscina só com gás ou eletricidade comprados custou caro demais. Com o Sol fazendo a maior parte do trabalho, a caldeira liga menos e por menos tempo.</p>
+          <p><strong>Ordem de grandeza</strong> (exemplo ilustrativo, com volume hipotético): elevar <strong>50 m³</strong> de água em <strong>2 °C</strong> exige cerca de <strong>116 kWh</strong> (50 m³ × 2 °C × 1,16 kWh por m³·°C). A caldeira só precisa fornecer a parte dessa energia que o Sol não entregar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11. TINKERCAD ================= -->
+    <section class="slide" id="s11" data-apresentador="Amanda">
+      <div class="conteudo">
+        <h2><span class="num">11</span> Aplicação simples no Tinkercad</h2>
+        <p>No <strong>Tinkercad Circuits</strong> dá para simular o controle da caldeira com um Arduino: um sensor mede a temperatura da água e um LED representa a caldeira, que liga quando a água está fria e desliga quando atinge a temperatura-alvo. É uma <strong>maquete virtual</strong> do funcionamento, sem risco e sem custo.</p>
+
+        <h3>Componentes</h3>
+        <div class="tabela-rolagem">
+          <table>
+            <thead><tr><th>Componente</th><th>Função na simulação</th><th>Ligação</th></tr></thead>
+            <tbody>
+              <tr><td>Arduino Uno</td><td>Cérebro do controle</td><td>—</td></tr>
+              <tr><td>Sensor de temperatura TMP36</td><td>Mede a temperatura da água</td><td>5V, GND e saída no pino A0</td></tr>
+              <tr><td>LED vermelho + resistor de 220 Ω</td><td>Representa a caldeira ligada</td><td>LED no pino 8, resistor em série, outro lado no GND</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="duas-colunas">
+          <div>
+            <h3>Passo a passo</h3>
+            <ol class="passos">
+              <li>No Tinkercad, crie um novo circuito (Circuits) e adicione os componentes da tabela.</li>
+              <li>Conecte o TMP36 e o LED como indicado.</li>
+              <li>Abra o editor de código, escolha a opção de texto e cole o programa abaixo.</li>
+              <li>Inicie a simulação, clique no sensor e arraste o controle de temperatura: abaixo de 27 °C o LED acende; acima de 29 °C ele apaga.</li>
+            </ol>
+          </div>
+          <figure class="foto">
+            <img data-imagem="imagem8" alt="Print do circuito montado no Tinkercad com Arduino, TMP36 e LED">
+            <figcaption>Nosso circuito montado no Tinkercad.</figcaption>
+          </figure>
+        </div>
+
+        <div class="codigo-caixa">
+          <button class="botao-copiar" type="button" data-copiar="codigoArduino">Copiar código</button>
+<pre><code id="codigoArduino">const int PIN_TEMP = A0;        // sensor TMP36
+const int PIN_CALDEIRA = 8;     // LED que representa a caldeira
+const float ALVO = 28.0;        // temperatura desejada (°C)
+const float HISTERESE = 1.0;    // folga para não ligar e desligar o tempo todo
+
+void setup() {
+  pinMode(PIN_CALDEIRA, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  float tensao = analogRead(PIN_TEMP) * 5.0 / 1024.0;
+  float temp = (tensao - 0.5) * 100.0;   // conversão do TMP36 para °C
+
+  if (temp &lt; ALVO - HISTERESE) {
+    digitalWrite(PIN_CALDEIRA, HIGH);    // água fria: liga a caldeira
+  } else if (temp &gt; ALVO + HISTERESE) {
+    digitalWrite(PIN_CALDEIRA, LOW);     // água no alvo: desliga
+  }
+
+  Serial.println(temp);
+  delay(500);
+}</code></pre>
+        </div>
+
+        <!-- Mini simulador no próprio site -->
+        <div class="simulador">
+          <h3>Teste aqui mesmo: arraste a temperatura da água</h3>
+          <div class="simulador-corpo">
+            <div class="simulador-controle">
+              <label for="tempSim">Temperatura da água: <strong id="tempValor">25,0 °C</strong></label>
+              <input type="range" id="tempSim" min="15" max="40" step="0.5" value="25">
+              <div class="simulador-escala"><span>15 °C</span><span>alvo 28 °C</span><span>40 °C</span></div>
+            </div>
+            <div class="simulador-led">
+              <div class="led" id="ledSim" aria-hidden="true"></div>
+              <p id="estadoSim">Caldeira LIGADA</p>
+            </div>
+          </div>
+          <p class="nota">Mesma lógica do código: liga abaixo de 27 °C, desliga acima de 29 °C. Entre 27 e 29 °C ela mantém o estado anterior (histerese).</p>
+        </div>
+
+        <div class="grade-2">
+          <div class="cartao cartao-sol">
+            <h3>Para evoluir o projeto</h3>
+            <p>Adicionar um <strong>fotorresistor (LDR)</strong> para representar o Sol: com bastante luz, a caldeira fica desligada mesmo que a água esteja um pouco abaixo do alvo, e só entra em dias escuros. Isso reproduz a lógica do sistema híbrido.</p>
+          </div>
+          <div class="cartao cartao-alerta">
+            <h3>Limite da simulação</h3>
+            <p>O LED apenas representa a caldeira. Em um sistema real, a caldeira elétrica é ligada por um relé ou contator dimensionado para a potência dela, e a instalação deve ser feita por profissional habilitado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 12. CURITIBA ================= -->
+    <section class="slide" id="s12" data-apresentador="Amanda">
+      <div class="conteudo">
+        <h2><span class="num">12</span> Por que a energia elétrica deve acompanhar a solar em Curitiba</h2>
+        <div class="duas-colunas">
+          <div>
+            <p>Em Curitiba o Sol sozinho não garante a água aquecida o ano todo: ele é mais fraco <strong>justamente no inverno</strong>, quando a piscina mais perde calor. Por isso o projeto prevê a <strong>caldeira elétrica como apoio</strong>, alimentada pela rede e, quando possível, pelas placas fotovoltaicas.</p>
+
+            <div class="grafico-barras" role="img" aria-label="Irradiação média diária no Paraná: verão 5,88 kWh/m², inverno 3,47 kWh/m²">
+              <p class="grafico-titulo">Irradiação média diária no Paraná (kWh/m²)</p>
+              <div class="barra-linha">
+                <span class="barra-rotulo">Verão</span>
+                <span class="barra-trilho"><span class="barra verao" style="width: 100%"></span></span>
+                <span class="barra-valor">5,88</span>
+              </div>
+              <div class="barra-linha">
+                <span class="barra-rotulo">Inverno</span>
+                <span class="barra-trilho"><span class="barra inverno" style="width: 59%"></span></span>
+                <span class="barra-valor">3,47</span>
+              </div>
+              <p class="grafico-nota">No inverno chega cerca de 41% menos energia do Sol.</p>
+            </div>
+          </div>
+          <figure class="foto">
+            <img data-imagem="imagem10" alt="Dia nublado ou com nevoeiro em Curitiba">
+            <figcaption>Inverno em Curitiba: menos Sol, mais nevoeiro.</figcaption>
+          </figure>
+        </div>
+
+        <div class="tabela-rolagem">
+          <table>
+            <thead><tr><th>Indicador</th><th>Valor</th><th>Fonte</th></tr></thead>
+            <tbody>
+              <tr><td>Irradiação média diária no Paraná, verão</td><td>5,88 kWh/m²</td><td><a href="https://utfpr-ct-static-content.s3.amazonaws.com/labens.ct.utfpr.edu.br/wp-content/uploads/2018/11/SILVEIRA-et-al-Artigo-Completo-Smart-Energy-2018-.pdf" target="_blank" rel="noopener">Silveira et al., UTFPR (2018)</a></td></tr>
+              <tr><td>Irradiação média diária no Paraná, inverno</td><td>3,47 kWh/m² (cerca de 41% menos que no verão)</td><td><a href="https://utfpr-ct-static-content.s3.amazonaws.com/labens.ct.utfpr.edu.br/wp-content/uploads/2018/11/SILVEIRA-et-al-Artigo-Completo-Smart-Energy-2018-.pdf" target="_blank" rel="noopener">Silveira et al., UTFPR (2018)</a></td></tr>
+              <tr><td>Média diária da Região Sul vs. Nordeste</td><td>4,44 vs. 5,48 kWh/m² (Sul cerca de 19% menor)</td><td><a href="https://utfpr-ct-static-content.s3.amazonaws.com/labens.ct.utfpr.edu.br/wp-content/uploads/2018/11/SILVEIRA-et-al-Artigo-Completo-Smart-Energy-2018-.pdf" target="_blank" rel="noopener">Silveira et al., UTFPR (2018)</a></td></tr>
+              <tr><td>Dias com sol em Curitiba em 2013</td><td>116 dias (32% do ano)</td><td><a href="https://www.gazetadopovo.com.br/curitiba/curitiba-tem-menos-dias-de-sol-que-ny-londres-berlim-e-praga-97wqsyff1z08plrq9sby7v0i6/" target="_blank" rel="noopener">Gazeta do Povo</a></td></tr>
+              <tr><td>Dias de nevoeiro em Curitiba, junho e julho</td><td>cerca de 10 por mês</td><td><a href="https://www.gazetadopovo.com.br/vida-e-cidadania/curitiba-a-nublada-e75qodg3ifavetbef8ndafaz2" target="_blank" rel="noopener">Gazeta do Povo</a></td></tr>
+              <tr><td>Duração do dia no solstício de inverno em Curitiba</td><td>10 h 41 min</td><td><a href="https://www.bemparana.com.br/noticias/parana/curitiba-tera-um-dos-dias-mais-curtos-do-brasil-no-domingo-entenda" target="_blank" rel="noopener">Bem Paraná</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota">A contagem de 116 dias vem de uma ferramenta da Embratur que não divulgou sua metodologia; use-a como ordem de grandeza. Os valores de irradiação são do estado do Paraná, não só de Curitiba.</p>
+
+        <h3>O que isso significa para o projeto</h3>
+        <ul class="lista-cartoes">
+          <li><strong>A demanda de calor e a oferta de Sol andam em sentidos opostos.</strong> No inverno a piscina esfria mais rápido e o Sol entrega menos energia.</li>
+          <li><strong>Frentes frias e nevoeiro derrubam a produção por vários dias seguidos.</strong> Em um inverno típico, a chuva chega ao fim de um intervalo de seis a sete dias entre frentes frias, segundo a <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/por-que-curitiba-e-tao-nublada-0j0tpsa38sv2f27zq4e81sfec" target="_blank" rel="noopener">Gazeta do Povo</a>.</li>
+          <li><strong>As placas fotovoltaicas também produzem menos no inverno.</strong> Em um sistema da UTFPR em Curitiba, a geração mínima mensal foi de 112 kWh em junho de 2012 e de 2013, contra uma média de cerca de 197 kWh por mês (2.364 kWh por ano), segundo o mesmo <a href="https://utfpr-ct-static-content.s3.amazonaws.com/labens.ct.utfpr.edu.br/wp-content/uploads/2018/11/SILVEIRA-et-al-Artigo-Completo-Smart-Energy-2018-.pdf" target="_blank" rel="noopener">estudo da UTFPR</a>.</li>
+          <li><strong>Apoio elétrico garante a temperatura nos dias ruins.</strong> A caldeira elétrica entra só para completar o que falta, e a manta térmica reduz o calor que ela precisa repor.</li>
+        </ul>
+        <p class="resultado">O Sol continua sendo a base do sistema, principalmente de setembro a março. A eletricidade não substitui a energia solar: ela cobre os dias e as estações em que o Sol de Curitiba não basta.</p>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSÃO ================= -->
+    <section class="slide conclusao" id="conclusao" data-apresentador="Amanda">
+      <div class="conteudo">
+        <h2><span class="num">✓</span> Conclusão</h2>
+        <div class="grade-3">
+          <div class="cartao cartao-sol"><h3>☀️ Sol como base</h3><p>Coletores solares aquecem a água e placas fotovoltaicas geram a eletricidade do sistema.</p></div>
+          <div class="cartao cartao-azul"><h3>🛡️ Manta térmica</h3><p>Guarda o calor já conquistado e reduz a perda por evaporação.</p></div>
+          <div class="cartao"><h3>🔌 Caldeira de apoio</h3><p>Liga só quando falta calor, nos dias frios e nublados de Curitiba.</p></div>
+        </div>
+        <p class="destaque-grande">Uma piscina aquecida com <strong>baixa emissão de poluentes</strong>, <strong>custo de operação reduzido</strong> e que ainda vira <strong>um exemplo prático de física aplicada</strong>.</p>
+        <p class="agradecimento">Obrigado!</p>
+      </div>
+    </section>
+
+    <!-- ================= FONTES ================= -->
+    <section class="slide" id="fontes" data-apresentador="Todos">
+      <div class="conteudo">
+        <h2><span class="num">📚</span> Fontes</h2>
+        <ol class="lista-fontes">
+          <li>SILVEIRA, C. O.; TONOLO, E. A.; KRASNHAK, L. B.; URBANETZ JUNIOR, J. <em>Acompanhamento de desempenho e contribuição da capacidade instalada de SFVCR frente ao panorama nacional.</em> XXII Congresso Brasileiro de Automática, João Pessoa: SBA, 2018. UTFPR / LABENS. Disponível em: <a href="https://utfpr-ct-static-content.s3.amazonaws.com/labens.ct.utfpr.edu.br/wp-content/uploads/2018/11/SILVEIRA-et-al-Artigo-Completo-Smart-Energy-2018-.pdf" target="_blank" rel="noopener">labens.ct.utfpr.edu.br (PDF)</a>.</li>
+          <li>GAZETA DO POVO. <em>Curitiba tem menos dias de sol que NY, Londres, Berlim e Praga.</em> Curitiba, 2014. Disponível em: <a href="https://www.gazetadopovo.com.br/curitiba/curitiba-tem-menos-dias-de-sol-que-ny-londres-berlim-e-praga-97wqsyff1z08plrq9sby7v0i6/" target="_blank" rel="noopener">gazetadopovo.com.br</a>.</li>
+          <li>GAZETA DO POVO. <em>Curitiba, a nublada.</em> Disponível em: <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/curitiba-a-nublada-e75qodg3ifavetbef8ndafaz2" target="_blank" rel="noopener">gazetadopovo.com.br</a>.</li>
+          <li>GAZETA DO POVO. <em>Por que Curitiba é tão nublada?</em> Disponível em: <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/por-que-curitiba-e-tao-nublada-0j0tpsa38sv2f27zq4e81sfec" target="_blank" rel="noopener">gazetadopovo.com.br</a>.</li>
+          <li>BEM PARANÁ. <em>Curitiba terá um dos dias mais curtos do Brasil no domingo; entenda.</em> Disponível em: <a href="https://www.bemparana.com.br/noticias/parana/curitiba-tera-um-dos-dias-mais-curtos-do-brasil-no-domingo-entenda" target="_blank" rel="noopener">bemparana.com.br</a>.</li>
+          <li>AUTODESK. <em>Tinkercad Circuits</em> (simulador usado na aplicação com Arduino). Disponível em: <a href="https://www.tinkercad.com" target="_blank" rel="noopener">tinkercad.com</a>.</li>
+        </ol>
+        <p class="nota">As imagens usadas no site são fotos reais do projeto e da piscina da escola, ou imagens indicadas com seus respectivos créditos.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p><strong>Aquecimento Solar da Piscina Escolar</strong> · Projeto Integrador</p>
+    <p>Rafaela · Beatriz · Daniel · Amanda</p>
+  </footer>
+
+  <!-- ================= CONTROLES DO MODO APRESENTAÇÃO ================= -->
+  <div class="controles-apresentacao" id="controles" hidden>
+    <button type="button" id="btnAnterior" aria-label="Slide anterior">←</button>
+    <div class="controles-info">
+      <span class="controles-quem" id="controlesQuem">Amanda</span>
+      <span class="controles-contador" id="controlesContador">1 / 16</span>
+    </div>
+    <button type="button" id="btnProximo" aria-label="Próximo slide">→</button>
+    <button type="button" id="btnTelaCheia" class="controles-secundario" aria-label="Tela cheia">⛶</button>
+    <button type="button" id="btnSair" class="controles-secundario" aria-label="Sair do modo apresentação">✕ Sair</button>
+    <div class="controles-barra"><span id="controlesBarra"></span></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
